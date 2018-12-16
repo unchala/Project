@@ -12,5 +12,24 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
+
+
+//Route::get('/cals-{num1}-{num2}', function ($num1,$num2) {
+//    return ($num1 + $num2);
+//});
+
+Route::get('/about', function () {
+    return view('about');
+});
+
+Route::get('/play/{num1}/{num2}', function ($num1, $num2) {
+    $data = [
+        'num1' => $num1,
+        'num2' => $num2
+    ];
+
+    return view('play', $data);
+});
+
