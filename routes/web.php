@@ -33,3 +33,6 @@ Route::get('/play/{num1}/{num2}', function ($num1, $num2) {
     return view('play', $data);
 });
 
+Route::get('/contact', function () {
+    return view('contact');
+});
